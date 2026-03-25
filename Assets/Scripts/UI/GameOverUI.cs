@@ -5,6 +5,8 @@ using System.Collections;
 
 public class GameOverUI : MonoBehaviour
 {
+    
+
     [Header("Components")]
     [SerializeField] private Image fader;
     [SerializeField] private GameObject menuPanel;
@@ -70,6 +72,7 @@ public class GameOverUI : MonoBehaviour
     public void RestartLevel() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     public void QuitToMenu()
     {
+        AudioManager.Instance.PlayMenuMusic();
         SceneManager.LoadScene("MainMenu");
     }
 }
