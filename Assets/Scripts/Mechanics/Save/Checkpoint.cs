@@ -27,7 +27,7 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             sRend.color = Color.green;
-
+            AudioManager.Instance.PlaySaveSFX();
             /* The C# Way
             // 3. Let everyone know checkpoint has been reached!
             OnCheckpointReached?.Invoke(collision.transform.position);

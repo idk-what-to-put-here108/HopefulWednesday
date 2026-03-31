@@ -22,6 +22,7 @@ public abstract class Enemy : Character
             if(contactNormal.y <= -0.5f)
             {
                 // Successful "Bonk"
+                AudioManager.Instance.PlayKillSFX();
                 OnStomped(player);
             }
             else

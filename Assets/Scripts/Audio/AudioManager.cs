@@ -34,6 +34,7 @@ public class AudioManager : MonoBehaviour
         }
         
     }
+    //--------Music---------//
     public void PlayMenuMusic()
     {
         PlayMusic(playlist.menuTheme);
@@ -42,11 +43,32 @@ public class AudioManager : MonoBehaviour
     {
         PlayMusic(playlist.levelTheme);
     }
+
+    //--------SFX----------//
     public void PlayJumpSFX()
     {
         SFXSource.PlayOneShot(playlist.jump);
     }
-
+    public void PlaySaveSFX()
+    {
+        SFXSource.PlayOneShot(playlist.checkpoint);
+    }
+    public void PlayKillSFX()
+    {
+        SFXSource.PlayOneShot(playlist.kill);
+    }
+    public void PlayDeadSFX()
+    {
+        SFXSource.PlayOneShot(playlist.dead);
+    }
+    public void PlayCollectSFX()
+    {
+        SFXSource.PlayOneShot(playlist.collect);
+    }
+    public void PlayHurtSFX()
+    {
+        SFXSource.PlayOneShot(playlist.hurt);
+    }
     public void PlayMusic(AudioClip clip)
     {
         if (musicSource.clip == clip)

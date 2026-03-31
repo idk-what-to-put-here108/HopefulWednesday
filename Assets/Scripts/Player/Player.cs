@@ -56,6 +56,7 @@ public class Player : Character
 
     public void OnMove(InputAction.CallbackContext context)
     {
+
         // Reads the Vector2 value (WASD/Joystick)
         moveInput = context.ReadValue<Vector2>();
     }
@@ -118,11 +119,12 @@ public class Player : Character
     public override void TakeDamage(int amount)
     {
         if (isDead || isInvulnerable) return;
-
+        AudioManager.Instance.PlayHurtSFX();
         currentHealth -= amount;
 
         if(currentHealth <= 0)
         {
+            AudioManager.Instance.PlayDeadSFX();
             Die();            
         }
         else

@@ -15,3 +15,8 @@ MonoBehaviour:
   menuTheme: {fileID: 8300000, guid: c4e89a62a84bd0d4c917b326373443e2, type: 3}
   levelTheme: {fileID: 8300000, guid: 8c91f9365558e3242864116ed7c99fc3, type: 3}
   jump: {fileID: 8300000, guid: aa98db8ffce059542a98248cfc79be26, type: 3}
+  checkpoint: {fileID: 8300000, guid: ff3660faf62a31d479deeea122719b89, type: 3}
+  kill: {fileID: 8300000, guid: 4b0dd2e3a30db5042a437f971081bfc3, type: 3}
+  collect: {fileID: 8300000, guid: c2f3cf4e2450e224abd4cf3cf5c7918c, type: 3}
+  dead: {fileID: 8300000, guid: 36b3d5c5603c486439d31f563386a49f, type: 3}
+  hurt: {fileID: 8300000, guid: bd290d26b54742c4ca4d1afbbb3097e4, type: 3}
