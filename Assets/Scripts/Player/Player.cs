@@ -18,6 +18,7 @@ public class Player : Character
     public PlayerAirborneState AirborneState = new PlayerAirborneState();
     public PlayerHurtState HurtState = new PlayerHurtState();
     public PlayerDeathState DeathState = new PlayerDeathState();
+    public PlayerCrouchState CrouchState = new PlayerCrouchState();
 
     [HideInInspector] public Vector2 moveInput;
     [HideInInspector] public int jumpsRemaining;
@@ -76,6 +77,12 @@ public class Player : Character
     {
         if (context.started)
             currentState.OnJumpPressed(this); // Pass input intent to state
+    }
+
+    public void OnCrouch(InputAction.CallbackContext context)
+    {
+        if (context.started)
+            currentState.OnCrouchPressed(this); // Pass input intent to state
     }
 
     // --- Shared Logic Helpers ---
